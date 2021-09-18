@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Few Crypto Converter</string>
+
+    <string name="bottom_bar_home">Home</string>
+    <string name="prices">Prices</string>
+    <string name="bottom_bar_portfolio">Portfolio</string>
+    <string name="bottom_bar_discover">Discover</string>
+    <string name="bottom_bar_settings">Settings</string>
+    <string name="font_family_medium">sans-serif-medium</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="screen_settings">Settings Screen</string>
+    <string name="screen_prices">Prices Screen</string>
+    <string name="screen_discover">Discover Screen</string>
+    <string name="screen_portfolio">Portfolio Screen</string>
+    <string name="toast_coming_soon">Coming soon.</string>
 </resources>

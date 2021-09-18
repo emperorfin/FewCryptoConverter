@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_home"
+        android:icon="@drawable/icon_home_tab_home"
+        android:title="@string/bottom_bar_home" />
+    <item
+        android:id="@+id/tab_market"
+        android:icon="@drawable/icon_home_tab_market"
+        android:title="@string/prices" />
+    <item
+        android:id="@+id/tab_portfolio"
+        android:icon="@drawable/icon_home_tab_portfolio"
+        android:title="@string/bottom_bar_portfolio" />
+    <item
+        android:id="@+id/tab_discover"
+        android:icon="@drawable/icon_home_tab_discover"
+        android:title="@string/bottom_bar_discover" />
+    <item
+        android:id="@+id/tab_more"
+        android:icon="@drawable/icon_home_tab_more"
+        android:title="@string/bottom_bar_settings" />
+</menu>

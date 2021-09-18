@@ -12,5 +12,18 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <!--TODO: rem-->
+        <!-- <item name="cmc_HomeTabSelectColor">@color/white</item>-->
+    </style>
+
+    <style name="Widget.BottomNavigationView" parent="@style/Widget.Design.BottomNavigationView">
+        <item name="android:textSize">@dimen/bottom_nav_text_size</item>
+        <item name="android:fontFamily">@string/font_family_medium</item>
+    </style>
+
+    <style name="BottomNavigation">
+        <item name="paddingEnd">@dimen/bottom_nav_padding</item>
+        <item name="paddingStart">@dimen/bottom_nav_padding</item>
     </style>
 </resources>

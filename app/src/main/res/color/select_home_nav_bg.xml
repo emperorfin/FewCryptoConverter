@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--TODO: rem-->
+<!--    <item android:color="?cmc_HomeTabSelectColor" android:state_checked="true" />-->
+    <item android:color="@color/black" android:state_checked="true" />
+    <!--TODO: rem-->
+<!--    <item android:color="?cmc_HomeTabUnSelectColor" android:state_checked="false" />-->
+    <item android:color="@color/cmc_disabled_tab_light" android:state_checked="false" />
+</selector>

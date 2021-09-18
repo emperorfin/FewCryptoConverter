@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="cmc_disabled_tab_dark">#ff646b80</color>
+    <color name="cmc_disabled_tab_light">#ff808a9d</color>
 </resources>
