@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_16dp"
+    android:layout_marginTop="@dimen/dimen_32dp"
+    android:layout_marginEnd="@dimen/dimen_16dp">
+
+    <include
+        android:id="@id/header"
+        layout="@layout/item_home_header_provider_news"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNews"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingEnd="@dimen/dimen_16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/item_home_news_section"/>
+
+    <TextView
+        android:id="@+id/btnSeeAllNews"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_48dp"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:background="@drawable/bg_home_news_see_all"
+        android:gravity="center"
+        android:text="@string/see_all_news"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="14.0sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvNews"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

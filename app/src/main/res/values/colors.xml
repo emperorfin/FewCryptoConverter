@@ -10,4 +10,16 @@
 
     <color name="cmc_disabled_tab_dark">#ff646b80</color>
     <color name="cmc_disabled_tab_light">#ff808a9d</color>
+    <color name="home_bottom_sheet_bg_light">#ffffffff</color>
+    <color name="dark_neutral_6">#ff171924</color>
+    <color name="dark_neutral_1">#ffa1a7bb</color>
+    <color name="light_neutral_6">#ff58667e</color>
+    <color name="primary_blue">#ff3861fb</color>
+    <color name="light_grey">#ffeff2f5</color>
+    <color name="light_neutral_3">#ffcfd6e4</color>
+    <color name="cmc_home_hr">#ffeff2f5</color>
+    <color name="border_shadow_color">#1458667e</color>
+
+    <color name="red_700">#D32F2F</color>
+    <color name="green_700">#388E3C</color>
 </resources>

@@ -1,14 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
     tools:context=".mainscreens.fragments.MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeTitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_72dp"
+        android:layout_gravity="top"
+        android:background="@android:color/transparent"
+        android:clipChildren="false"
+        android:elevation="7.0dip"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
-</FrameLayout>
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:minWidth="150.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/title1SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16.0dip"
+                android:layout_marginEnd="16.0dip"
+                android:minWidth="150.0dip"
+                android:text="@string/home_title_global_metrics"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16.0dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_cmc_brand" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/movableTopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="72.0dip"
+        android:background="@color/dark_neutral_6"
+        android:elevation="7.0dip"
+        android:gravity="start"
+        android:translationY="-72.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/title4SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="@dimen/padding"
+            android:gravity="center"
+            android:text="@string/home_title"
+            android:textColor="?android:textColorPrimary" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="72.0dip"
+        android:layout_gravity="top"
+        android:background="@android:color/transparent"
+        android:clipChildren="false"
+        android:elevation="7.0dip"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_marginEnd="@dimen/padding"
+            android:background="@drawable/ic_search_dark_neutral_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivBadgeView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <CMCNotificationBadgeView-->
+<!--            android:id="@id/ivBadgeView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="fill_parent"-->
+<!--            android:minWidth="30.0dip"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <ImageView
+            android:id="@+id/ivBadgeView"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_marginEnd="@dimen/padding"
+            android:background="@drawable/ic_bell"
+            android:minWidth="30.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18.0dip"
+            android:background="@drawable/ic_home_close_sheet_btn"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/homeSections"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeTitleBar"
+        tools:ignore="MissingConstraints">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ff000000">
+
+            <FrameLayout
+                android:id="@+id/globalDataContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_global_data_corner"
+                android:paddingBottom="72.0dip" />
+
+            <FrameLayout
+                android:id="@+id/globalTickerContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_home_global_scroll"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding">
+
+<!--                <GlobalTickerView-->
+<!--                    android:id="@id/globalTickerView"-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="@dimen/dimen_48dp" />-->
+
+<!--                <com.vinay.ticker.lib.TickerView-->
+<!--                    android:id="@+id/tickerView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/dimen_48dp" />-->
+
+                <FrameLayout
+                    android:layout_width="@dimen/dimen_110dp"
+                    android:layout_height="@dimen/dimen_24dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:background="@drawable/gradient_left_right_blue" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:src="@drawable/ic_right_back" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/bottomContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_home_bottom_sheet_corner">
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rvBottom"-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:clipChildren="false"-->
+<!--                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />-->
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:scrollbars="none"
+                android:scrollingCache="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginBottom="58dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/provider_top_coin"
+                        layout="@layout/item_home_top_coin_provider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_16dp"/>
+
+                    <include
+                        android:id="@+id/provider_gainer_loser"
+                        layout="@layout/item_home_gainer_loser_provider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_16dp"/>
+
+                    <include
+                        android:id="@+id/provider_news"
+                        layout="@layout/item_home_news_provider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_16dp"/>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <View
+                android:id="@+id/vMask"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:alpha="0.0"
+                android:background="@drawable/bg_home_bottom_sheet_mask_corner"
+                android:clickable="false"
+                android:focusable="false" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_24dp"
+    android:layout_marginBottom="@dimen/padding">
+
+    <LinearLayout
+        android:id="@+id/layTitleContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_4dp"
+            android:src="@drawable/ic_trending"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/title3Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_70dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/home_header_title_news"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        style="@style/footnoteRegularSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:textColor="@color/light_neutral_6"
+        app:layout_constraintStart_toStartOf="@id/layTitleContainer"
+        app:layout_constraintTop_toBottomOf="@id/layTitleContainer"/>
+
+    <TextView
+        android:id="@+id/btnSeeAll"
+        style="@style/bodyMediumSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_24dp"
+        android:gravity="center"
+        android:text="@string/see_all"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,4 +14,12 @@
     <string name="screen_discover">Discover Screen</string>
     <string name="screen_portfolio">Portfolio Screen</string>
     <string name="toast_coming_soon">Coming soon.</string>
+    <string name="home_title_global_metrics">Global Metrics</string>
+    <string name="home_title">Home</string>
+    <string name="see_all_news">See all news</string>
+    <string name="see_all">See All</string>
+    <string name="home_header_title_top_coins">Top Coins</string>
+    <string name="home_header_title_gainers_and_losers"><![CDATA[Gainers & Losers]]></string>
+    <string name="home_header_subtitle_based_on_top_100_coins">Based on Top 100 Coins</string>
+    <string name="home_header_title_news">News</string>
 </resources>
