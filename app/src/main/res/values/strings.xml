@@ -22,4 +22,6 @@
     <string name="home_header_title_gainers_and_losers"><![CDATA[Gainers & Losers]]></string>
     <string name="home_header_subtitle_based_on_top_100_coins">Based on Top 100 Coins</string>
     <string name="home_header_title_news">News</string>
+    <string name="button_convert">Convert</string>
+    <string name="conversion_instruction">Note: If you want to convert to another coin, select a coin icon to select the desired coin.</string>
 </resources>

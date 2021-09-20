@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivity {
                     case R.id.tab_market:
                         inflateFragment(PricesFragment.FRAGMENT_TAG);
 
-                        Toast.makeText(MainActivity.this, getString(R.string.toast_coming_soon), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this, getString(R.string.toast_coming_soon), Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.tab_portfolio:
                         inflateFragment(PortfolioFragment.FRAGMENT_TAG);
